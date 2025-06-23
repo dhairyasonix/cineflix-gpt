@@ -1,4 +1,5 @@
 # Netflix GPT
+Click on Sign up" and use any random email and a strong password (e.g., Test1234@) to access the project.
 
 ## Overview
 
