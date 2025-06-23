@@ -44,7 +44,7 @@ console.log(id)
         <p className="my-2 text-md">{overview}</p>
         <div className="my-4"> <span className="bg-white text-black text-md  mr-4 px-2 md:py-2 py-1 rounded-sm">Release Date: {release_date}</span>
         <span className="bg-white text-black text-md mr-4 px-2 md:py-2 py-1 rounded-sm">Rating: {vote_average}</span>
-        <span className="bg-white text-black text-md mr-4 px-2 md:py-2 py-1 rounded-sm">Language: {original_language.toUpperCase()}</span></div>
+        <span className="bg-white  text-black text-md mr-4 px-2 md:py-2 py-1 rounded-sm">Language: {original_language.toUpperCase()}</span></div>
        
       </div>
 
