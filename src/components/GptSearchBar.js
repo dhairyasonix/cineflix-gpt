@@ -1,7 +1,7 @@
-import React, { useRef } from 'react'
+import  { useRef } from 'react'
 import lang from '../utils/LanguageConstants'
 import { useDispatch, useSelector } from 'react-redux'
-import { HfInference } from "@huggingface/inference";
+import { InferenceClient } from "@huggingface/inference";
 import { API_OPtion, GPT_KEY } from '../utils/constants';
 import { addGptMovieResult } from '../utils/gptSlice';
 
@@ -14,7 +14,7 @@ export const GptSearchBar = () => {
   const langugae = useSelector(store => store.config.lan)
 
   const input = useRef(null);
-  const client = new HfInference(GPT_KEY);
+  const client = new InferenceClient(GPT_KEY);
   //search move tmdb
   const searchMovieTmdb = async (movie) => {
     const data = await fetch('https://api.themoviedb.org/3/search/movie?query=' + movie + '&include_adult=false&language=en-US&page=1', API_OPtion);
@@ -25,21 +25,22 @@ export const GptSearchBar = () => {
 
 
   const heldleSearch = async () => {
-    const gptQuery = "Act as a movie recomndation system and suggest some movies for the query :" + input.current.value + "only give me names of 5 movies, comma seprated. like the Example Result: Gadar, Sholay, Don, Goalmaal, Koi mil gaya";
+    const gptQuery = "Act as a movie recomndation system and suggest some movies for the query : " + input.current.value + " only give me names of 5 movies by comma seprated. for Example Result:, Gadar, Sholay, Star Wars, Goalmaal, Godfather";
     const gptResult = await client.chatCompletion({
-      model: "mistralai/Mistral-Nemo-Instruct-2407",
-      messages: [
+    provider: "nscale",
+    model: "meta-llama/Llama-3.1-8B-Instruct",
+    messages: [
         {
           role: "user",
           content: gptQuery
         }
       ],
-      max_tokens: 500
+      
     });
 
     const gptMovies = gptResult?.choices[0]?.message?.content.split(",")
     
-    //
+    console.log(gptResult?.choices[0]?.message?.content)
     // for each movie will serch tmdb api
     const prommiseArray = gptMovies?.map(movie => searchMovieTmdb(movie));
     const tmdbResults = await Promise.all(prommiseArray);

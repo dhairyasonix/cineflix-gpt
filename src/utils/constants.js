@@ -1,5 +1,5 @@
 
-import bG_IMG from "../utils/Images/"
+import bG_IMG from "../utils/Images/BG_IMG.webp"
 export const LOGO = "https://fontmeme.com/permalink/240222/bcdb91e51f3c28e0157e790186fff21d.png"
 
 
@@ -32,4 +32,4 @@ export const SUPPORTED_LANG = [{
 
 
 
-export const GPT_KEY = "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";
+export const GPT_KEY = "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";

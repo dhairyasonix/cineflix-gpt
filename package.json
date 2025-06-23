@@ -4,7 +4,7 @@
   "homepage": "https://dhairyasonix.github.io/netflix-gpt",
   "private": true,
   "dependencies": {
-    "@huggingface/inference": "^2.8.1",
+    "@huggingface/inference": "^4.0.6",
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
     "firebase": "^11.2.0",
@@ -26,7 +26,6 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
-    
   },
   "eslintConfig": {
     "extends": [
