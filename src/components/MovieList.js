@@ -9,7 +9,7 @@ const MovieList = ({ title, movies }) => {
 
             <h1 className='text-xl md:text-3xl py-4'>{title}</h1>
 
-            <div className='flex scroll-container overflow-x-scroll scrollbar-hide '>
+            <div className='flex scroll-container overflow-x-scroll scrollbar-hiden '>
 
                 <div className='flex space-x-4'>
                     {movies?.map(movies => <MovieCard key={movies.id} movies={movies} />)}
