@@ -32,4 +32,6 @@ export const SUPPORTED_LANG = [{
 
 
 
-export const GPT_KEY = "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";
+
+export const GPT_KEY = process.env.REACT_APP_GPT_KEY;
+
