@@ -8,12 +8,17 @@ const useMovieTrailer = (movieId) => {
 
     // fetching trailler and updating a store vith trailler videro
     const getMovieVideo = async () => {
-        const data = await fetch("https://api.themoviedb.org/3/movie/" + movieId + "/videos?", API_OPtion);
+        try {
+            const data = await fetch("https://api.themoviedb.org/3/movie/" + movieId + "/videos?", API_OPtion);
         const json = await data.json()
 
         const filterData = json?.results?.filter(video => video.type === "Trailer")
         const selectedTrailer = filterData?.length ? filterData[0] : json?.results[0]
         setTriler(selectedTrailer)
+        } catch (error) {
+            console.log("Faield to get trailer "+error.message)
+        }
+        
 
         
     }

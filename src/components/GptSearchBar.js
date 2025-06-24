@@ -17,10 +17,15 @@ export const GptSearchBar = () => {
   const client = new InferenceClient(GPT_KEY);
   //search move tmdb
   const searchMovieTmdb = async (movie) => {
-    const data = await fetch('https://api.themoviedb.org/3/search/movie?query=' + movie + '&include_adult=false&language=en-US&page=1', API_OPtion);
+    try {
+      const data = await fetch('https://api.themoviedb.org/3/search/movie?query=' + movie + '&include_adult=false&language=en-US&page=1', API_OPtion);
 
     const json = await data.json()
     return json?.results;
+    } catch (error) {
+      console.log("Faield to ge gpt tmdb movie search "+error.message)
+    }
+    
   }
 
 

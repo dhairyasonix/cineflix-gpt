@@ -26,7 +26,7 @@ const useMovies = (movies) => {
         dispatch(addUpcominfMovies(json?.results));
     }
     catch (error) {
-      console.error("Failed to fetch movies:", error);
+      console.log("Failed to fetch movies: " + error.message);
       prompt("please change dns to 1.1.1.1");
     }
   };
