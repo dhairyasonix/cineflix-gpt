@@ -1,7 +1,7 @@
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import  { useEffect } from 'react'
 import { auth } from '../utils/firebase';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANG } from '../utils/constants';
@@ -56,7 +56,8 @@ const Header = () => {
 
   return (
     <div className='absolute py-2 bg-gradient-to-b from-black z-10 flex  flex-col md:flex-row justify-between w-full '>
-      <img className=' z-40 w-48 md:mx-10 pt-2 md:px-6 py-2 md:py-8 mx-auto' src={LOGO} alt='logo'></img>
+      
+     <Link to="/"><img className=' z-40 w-48 md:mx-10 pt-2 md:px-6 py-2 md:py-8 mx-auto' src={LOGO} alt='logo'></img></Link> 
 
       {location.pathname === "/brouse" && user && <div className='flex px-4 mx-auto md:mx-0'>
         <h4 className={`${showGptSearch && "hidden md:block"} md:px-2 py-1 mx-1 md:my-10 font-bold text-white text-lg`}>Hi {user?.displayName}</h4>
