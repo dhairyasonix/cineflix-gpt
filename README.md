@@ -1,9 +1,9 @@
-# Netflix GPT
+# Cineflix GPT
 Click on Sign up" and use any random email and a strong password (e.g., Test1234@) to access the project.
 
 ## Overview
 
-Netflix GPT is a React application that integrates with the TMDB API to provide a movie browsing experience. The app features user authentication, a search functionality powered by GPT, and a responsive design using Tailwind CSS.
+Cineflix GPT is a React application that integrates with the TMDB API to provide a movie browsing experience. The app features user authentication, a search functionality powered by GPT, and a responsive design using Tailwind CSS.
 
 ## Features
 

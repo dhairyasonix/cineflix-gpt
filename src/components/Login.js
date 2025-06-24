@@ -96,7 +96,7 @@ const Login = () => {
 
                 <button className='p-4 mt-6  w-full bg-red-600 rounded-lg ' onClick={handleButton} >{issignInForm ? "Sign In" : "Sign Up"}</button>
 
-                <p className=' my-4 cursor-pointer' onClick={toggleSignIn}>{issignInForm ? "New to Netflix? Sign up now." : "Already a Member? Sign in now"}</p>
+                <p className=' my-4 cursor-pointer' onClick={toggleSignIn}>{issignInForm ? "New to Cineflix? Sign up now." : "Already a Member? Sign in now"}</p>
 
                 <p className='text-xs m-1 p-2 text-red-600'> This is a personal project. No user information is stored or shared!</p>
             </form>
