@@ -59,8 +59,8 @@ const Header = () => {
       <img className=' z-40 w-48 md:mx-10 pt-2 md:px-6 py-2 md:py-8 mx-auto' src={LOGO} alt='logo'></img>
 
       {location.pathname === "/brouse" && user && <div className='flex px-4 mx-auto md:mx-0'>
-        <h4 className='md:px-2 py-1 mx-1 md:my-10 font-bold text-white text-lg'>Hi {user?.displayName}</h4>
-        {showGptSearch && <select className='px-2 py-1 mx-2 md:my-10 bg-gray-700 text-white rounded-sm hover:bg-opacity-70' onClick={handleLanguageChange}>
+        {<h4 className={`${showGptSearch && "hidden md:block"} md:px-2 py-1 mx-1 md:my-10 font-bold text-white text-lg`}>Hi {user?.displayName}</h4>}
+        {showGptSearch && <select className='px-2 py-2 mx-2 md:my-10 bg-gray-700 text-white rounded-sm hover:bg-opacity-70' onClick={handleLanguageChange}>
           {SUPPORTED_LANG.map(lan => <option key={lan.identifier} value={lan.identifier}>{lan.name}</option>)}
         </select>}
         <button onClick={handleGptSearch} className='px-2 py-1 mx-2 md:my-10 bg-purple-600 text-white font-bold rounded-lg hover:bg-opacity-70'>{showGptSearch ? "Home" : "GPT Search"}</button>
