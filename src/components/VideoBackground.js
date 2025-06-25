@@ -3,7 +3,7 @@ import useMovieTrailer from "../hooks/useMovieTrailler";
 
 const VideoBackground = ({ movieId }) => {
   const trailer = useMovieTrailer(movieId);
-if(!trailer) return;
+  if (!trailer) return;
   return (
     <div className="w-full h-full absolute overflow-hidden -top-32 ">
       <iframe

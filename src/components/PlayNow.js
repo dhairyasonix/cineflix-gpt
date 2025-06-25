@@ -14,8 +14,6 @@ const PlayNow = () => {
   const handleToggle = () => {
     dispatch(addPlayNow(null));
   };
-  
-  
 
   const wordLimit = 56;
   const words = overview?.split(" ") || [];
@@ -27,9 +25,14 @@ const PlayNow = () => {
     : words.slice(0, wordLimit).join(" ") + (shouldShowToggle ? "..." : "");
 
   return (
-    <div className="w-full h-screen bg-black bg-opacity-75 fixed z-[999]  "
-    onClick={handleToggle}>
-      <div className=" mt-[10vh] relative md:w-[45%]  bg-[#111827] mx-auto rounded-2xl" onClick={(e) => e.stopPropagation()} >
+    <div
+      className="w-full h-screen bg-black bg-opacity-75 fixed z-[999]  "
+      onClick={handleToggle}
+    >
+      <div
+        className=" mt-[10vh] relative md:w-[45%]  bg-[#111827] mx-auto rounded-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
           onClick={handleToggle}
           className="m-2 px-2  text-lg rounded-full bg-white absolute text-red-600 z-30 top-0 right-0 hover:bg-red-500 hover:text-white"
@@ -58,16 +61,16 @@ const PlayNow = () => {
         <div className="py-4 px-6  text-white">
           <h2 className="text-xl font-bold my-2">{title}</h2>
           <p className="my-2 text-md">
-      {displayedText}
-      {shouldShowToggle && (
-        <span
-          onClick={() => setShowFull(!showFull)}
-          className="text-gray-500 font-bold cursor-pointer ml-2"
-        >
-          {showFull ? "Show less" : "Show more"}
-        </span>
-      )}
-    </p>
+            {displayedText}
+            {shouldShowToggle && (
+              <span
+                onClick={() => setShowFull(!showFull)}
+                className="text-gray-500 font-bold cursor-pointer ml-2"
+              >
+                {showFull ? "Show less" : "Show more"}
+              </span>
+            )}
+          </p>
           <div className="my-4 ">
             <span className="bg-white text-black text-md mr-16  md:mr-4 px-2 md:py-2 py-1 rounded-sm inline-block mb-4 md:mb-0">
               Release Date: {release_date}
