@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { GptSearchBar } from "./GptSearchBar";
 import GptSearchSuggestion from "./GptSearchSuggestion";
 import { BACKGROUND } from "../utils/constants";
 
 const GptSerchPage = () => {
+  const [error,setError] = useState(null);
   return (
     <div>
       <div>
@@ -14,8 +15,8 @@ const GptSerchPage = () => {
         />
       </div>
       <div className="md:pt-[10%] pt-[60%] ">
-        <GptSearchBar />
-        <GptSearchSuggestion />
+        <GptSearchBar setError={setError} />
+        <GptSearchSuggestion error={error} />
       </div>
     </div>
   );

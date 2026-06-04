@@ -32,7 +32,7 @@ const useMovies = (movies) => {
       if (movies === "upcoming") dispatch(addUpcominfMovies(json?.results));
     } catch (error) {
       console.log("Failed to fetch movies: " + error.message);
-      prompt("please change dns to 1.1.1.1");
+      alert("To use this app, please change your DNS to 1.1.1.1");
     }
   };
 
