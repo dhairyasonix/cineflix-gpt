@@ -1,5 +1,8 @@
 # Cineflix GPT
-Click on Sign up" and use any random email and a strong password (e.g., Test1234@) to access the project.
+
+Click on "Sign up" and use any random email and a strong password (e.g., Test1234@) to access the project.
+
+Visit the live demo here: **https://cineflix-ai.vercel.app/**
 
 ## Overview
 
@@ -45,61 +48,62 @@ Cineflix GPT is a React application that integrates with the TMDB API to provide
 ## Application Structure
 
 ### Skeleton
+
 ├── Header
-│   ├── Logo
-│   ├── Navigation Bar
-│   ├── Cart
-│   ├── Authentication
-│       ├── Login Form
-│       │   ├── Email Input
-│       │   ├── Password Input
-│       │   ├── Submit Button
-│       ├── Sign Up Form
-│           ├── Name Input
-│           ├── Email Input
-│           ├── Password Input
-│           ├── Submit Button
+│ ├── Logo
+│ ├── Navigation Bar
+│ ├── Cart
+│ ├── Authentication
+│ ├── Login Form
+│ │ ├── Email Input
+│ │ ├── Password Input
+│ │ ├── Submit Button
+│ ├── Sign Up Form
+│ ├── Name Input
+│ ├── Email Input
+│ ├── Password Input
+│ ├── Submit Button
 │
 ├── Browser
-│   ├── Main Movie Section
-│   │   ├── Background Movie Trailer
-│   │   ├── Title
-│   │   ├── Description
-│   │   ├── Movie Suggestions
-│   │   ├── Movie List
-│   │   ├── Movie Card (Vertical Scroll)
-│   │   ├── Movie Card (Vertical Scroll)
-│   │   └── ...
-│   ├── Main Video Container
-│   │   ├── Video Background
-│   │   ├── Title
-│   │   └── Description
-│   ├── Secondary Container
-│       ├── Popular Movie List
-│       │   ├── Movie Card
-│       │   ├── Movie Card
-│       │   └── ...
-│       ├── Trending Movie List
-│       │   ├── Movie Card
-│       │   ├── Movie Card
-│       │   └── ...
-│       ├── Horror Movie List
-│           ├── Movie Card
-│           ├── Movie Card
-│           └── ...
+│ ├── Main Movie Section
+│ │ ├── Background Movie Trailer
+│ │ ├── Title
+│ │ ├── Description
+│ │ ├── Movie Suggestions
+│ │ ├── Movie List
+│ │ ├── Movie Card (Vertical Scroll)
+│ │ ├── Movie Card (Vertical Scroll)
+│ │ └── ...
+│ ├── Main Video Container
+│ │ ├── Video Background
+│ │ ├── Title
+│ │ └── Description
+│ ├── Secondary Container
+│ ├── Popular Movie List
+│ │ ├── Movie Card
+│ │ ├── Movie Card
+│ │ └── ...
+│ ├── Trending Movie List
+│ │ ├── Movie Card
+│ │ ├── Movie Card
+│ │ └── ...
+│ ├── Horror Movie List
+│ ├── Movie Card
+│ ├── Movie Card
+│ └── ...
 │
 ├── Search
-│   ├── GPT Search Bar
-│   ├── Search Results
-│   ├── Movie Suggestions
-│   ├── Movie Card
-│   ├── Movie Card
-│   └── ...
+│ ├── GPT Search Bar
+│ ├── Search Results
+│ ├── Movie Suggestions
+│ ├── Movie Card
+│ ├── Movie Card
+│ └── ...
 │
 └── Footer (Coming Soon)
-    ├── Links
-    ├── Contact Information
-    └── Social Media Links
+├── Links
+├── Contact Information
+└── Social Media Links
 
 - feel free to use
   npm run build
